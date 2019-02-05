@@ -4,12 +4,11 @@
 	<title>Labyrinth generator – Leto&#39;s Lab</title>
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-	<link rel="icon" type="image/png" href="https://prince-leto.github.io/favicon.png"/>
+	<link rel="icon" type="image/png" href="/favicon.png"/>
 
 	
 	
-	<script src="//cdnjs.cloudflare.com/ajax/libs/seedrandom/2.4.4/seedrandom.min.js">
-	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/seedrandom/2.4.4/seedrandom.min.js"></script>
 
 	
 	<link rel="stylesheet" type="text/css" href="https://unpkg.com/material-components-web@0.44.0/dist/material-components-web.min.css"/>
@@ -19,30 +18,33 @@
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
 
 	
-	<link rel="stylesheet" type="text/css" href="https://prince-leto.github.io/styles.css"/>
-	<script type="text/javascript" src="https://prince-leto.github.io/initiate.js"></script>
+	<link rel="stylesheet" type="text/css" href="/styles.css"/>
+	<link rel="stylesheet" type="text/css" href="/colors.css"/>
+	<script type="text/javascript" src="/initiate.js"></script>
 
 	
-	<script type="text/javascript" src="https://prince-leto.github.io/scripts/labyrinth-generator.js"></script>
+	<link rel="stylesheet" type="text/css" href="/drawer.css"/>
+	<script type="text/javascript" src="/scripts/labyrinth-generator.js"></script>
 
 </head>
 
-<header class="mdc-top-app-bar">
+
+	<header class="mdc-top-app-bar app-bar">
 	<div class="mdc-top-app-bar__row">
 		<section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
 			<a href="#" class="demo-menu material-icons mdc-top-app-bar__navigation-icon">menu</a>
-			<a class="mdc-top-app-bar__title" href="https://prince-leto.github.io/" style="color: inherit;">Leto&#39;s Lab</a>
+			<a class="mdc-top-app-bar__title" href="/" style="color: inherit;">Labyrinth generator</a>
 		</section>
 	</div>
 </header>
-
 
 
 	<aside class="mdc-drawer mdc-drawer--dismissible mdc-top-app-bar--fixed-adjust">
 		<div class="mdc-drawer__content">
 			<div class="mdc-layout-grid">
 				<div class="mdc-layout-grid__inner" style="grid-template-columns: repeat(2, minmax(0, 1fr))">
-					<div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2">
+					
+<div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2">
 	<div class="mdc-form-field">
 		<div class="mdc-checkbox">
 			<input type="checkbox" class="mdc-checkbox__native-control" id="animation-input"/>
