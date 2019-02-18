@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<title>Recaman sequence – Leto&#39;s Lab</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<link rel="icon" type="image/png" href="/favicon.png"/>
+
+	
+	
+	<script defer src="https://cdnjs.cloudflare.com/ajax/libs/seedrandom/2.4.4/seedrandom.min.js"></script>
+
+	
+	
+	
+	
+	<link rel="stylesheet" type="text/css" href="/style.7610d2202d1739758b6eda0caf6328429cc2793544f94ff921161686cfc4cce9.css" integrity="sha256-dhDSIC0XOXWLbtoMr2MoQpzCeTVE&#43;U/5IRYWhs/EzOk="/>
+	<script defer type="text/javascript" src="https://unpkg.com/material-components-web@0.44.0/dist/material-components-web.min.js"></script>
+
+	
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+
+	
+	<link rel="stylesheet" type="text/css" href="/styles.css"/>
+	<script defer src="/initiate.js"></script>
+
+	
+	<link rel="stylesheet" type="text/css" href="/drawer.css"/>
+
+	
+		
+		
+		<script defer type="text/javascript" src="/scripts/export-image.js"></script>
+	
+
+	
+	
+	
+		
+		<script defer type="text/javascript" src="/scripts/recaman-sequence.min.30c5e39f59a14b5a4cc5893ca8d62a034c604ced89f6b73dd0b71516a914ef08.js" integrity="sha256-MMXjn1mhS1pMxYk8qNYqA0xgTO2J9rc90LcVFqkU7wg="></script>
+	
+
+</head>
+
+
+	<header class="mdc-top-app-bar app-bar">
+	<div class="mdc-top-app-bar__row">
+		<section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+			<a href="#" class="demo-menu material-icons mdc-top-app-bar__navigation-icon">menu</a>
+			<a class="mdc-top-app-bar__title" href="/" style="color: inherit;">Recaman sequence</a>
+		</section>
+	</div>
+</header>
+
+
+	<aside class="mdc-drawer mdc-drawer--dismissible mdc-top-app-bar--fixed-adjust">
+		<div class="mdc-drawer__content">
+			<div class="mdc-layout-grid">
+				<div class="mdc-layout-grid__inner" style="grid-template-columns: repeat(2, minmax(0, 1fr))">
+					
+<div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2">
+	<div class="mdc-form-field">
+		<div class="mdc-checkbox">
+			<input type="checkbox" class="mdc-checkbox__native-control" id="animated-input" disabled/>
+			<div class="mdc-checkbox__background">
+				<svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+					<path class="mdc-checkbox__checkmark-path" fill="none" d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+				</svg>
+				<div class="mdc-checkbox__mixedmark"></div>
+			</div>
+		</div>
+		<label for="animated-input">Animated</label>
+	</div>
+</div>
+
+<div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2">
+	<button id="draw-button" class="mdc-button mdc-button--raised lab-button--fullwidth">
+		<span class="mdc-button__label">Draw</span>
+	</button>
+</div>
+
+<div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2">
+	<div class="mdc-text-field mdc-text-field--outlined">
+		<!-- Use pattern validation, because mdc does not support number fields -->
+		<input type="text" id="scale-input" class="mdc-text-field__input" value="7" pattern="[0-9]+|[0.9]+\.[0-9]+">
+		<div class="mdc-notched-outline">
+			<div class="mdc-notched-outline__leading"></div>
+			<div class="mdc-notched-outline__notch">
+				<label for="scale-input" class="mdc-floating-label">Scale</label>
+			</div>
+			<div class="mdc-notched-outline__trailing"></div>
+		</div>
+	</div>
+</div>
+
+<div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2">
+	<div class="mdc-text-field mdc-text-field--outlined">
+		<!-- Use pattern validation, because mdc does not support number fields -->
+		<input type="text" id="max-iteration-input" class="mdc-text-field__input" value="65" pattern="[0-9]+">
+		<div class="mdc-notched-outline">
+			<div class="mdc-notched-outline__leading"></div>
+			<div class="mdc-notched-outline__notch">
+				<label for="max-iteration-input" class="mdc-floating-label">Max iteration</label>
+			</div>
+			<div class="mdc-notched-outline__trailing"></div>
+		</div>
+	</div>
+</div>
+
+<div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2">
+	<div class="mdc-text-field mdc-text-field--outlined mdc-text-field--with-trailing-icon">
+		<!-- Use pattern validation, because mdc does not support number fields -->
+		<input type="text" id="hue-speed-input" class="mdc-text-field__input" value="3" pattern="[0-9]{1,2}|[12][0-9]{2}|3[0-5][0-9]|[0.9]+\.[0-9]+">
+		<div class="mdc-notched-outline">
+			<div class="mdc-notched-outline__leading"></div>
+			<div class="mdc-notched-outline__notch">
+				<label for="hue-speed-input" class="mdc-floating-label">Hue speed</label>
+			</div>
+			<div class="mdc-notched-outline__trailing"></div>
+		</div>
+	</div>
+</div>
+
+<div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2">
+	<div class="mdc-text-field mdc-text-field--outlined mdc-text-field--disabled">
+		<!-- Use pattern validation, because mdc does not support number fields -->
+		<input type="text" id="draw-speed-input" class="mdc-text-field__input" value="2" pattern="[0-9]+|[0.9]+\.[0-9]+" disabled>
+		<div class="mdc-notched-outline">
+			<div class="mdc-notched-outline__leading"></div>
+			<div class="mdc-notched-outline__notch">
+				<label for="draw-speed-input" class="mdc-floating-label">Draw speed</label>
+			</div>
+			<div class="mdc-notched-outline__trailing"></div>
+		</div>
+	</div>
+</div>
+
+<div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2">
+	<button id="download-button" class="mdc-button mdc-button--raised lab-button--fullwidth">
+		<span class="mdc-button__label">Download image</span>
+	</button>
+</div>
+
+				</div>
+			</div>
+		</div>
+	</aside>
+
+	<div class="mdc-drawer-app-content mdc-top-app-bar--fixed-adjust">
+		<main class="main-content" id="main-content">
+			<canvas id="draw"></canvas>
+		</main>
+	</div>
+
+</html>

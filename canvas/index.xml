@@ -6,10 +6,19 @@
     <description>Recent content in Canvas on Leto&#39;s Lab</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 17 Nov 2012 00:00:00 +0100</lastBuildDate>
+    <lastBuildDate>Wed, 15 Aug 2018 00:00:00 +0100</lastBuildDate>
     
 	<atom:link href="/canvas/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Recaman sequence</title>
+      <link>/canvas/recaman-sequence/</link>
+      <pubDate>Wed, 15 Aug 2018 00:00:00 +0100</pubDate>
+      
+      <guid>/canvas/recaman-sequence/</guid>
+      <description>AnimatedDrawScaleMax iterationHue speedDraw speedDownload image</description>
+    </item>
     
     <item>
       <title>Labyrinth generator</title>
@@ -17,7 +26,7 @@
       <pubDate>Sat, 17 Nov 2012 00:00:00 +0100</pubDate>
       
       <guid>/canvas/labyrinth-generator/</guid>
-      <description>     Animate?   Generate   Solve    Cell size (px)       Width       Height          Auto seed?    Seed      Download image   </description>
+      <description>     Animated   Generate   Solve    Cell size (px)       Width       Height          Auto seed?    Seed      Download image   </description>
     </item>
     
     <item>

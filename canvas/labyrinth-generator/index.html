@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
 	<meta charset="utf-8"/>
 	<title>Labyrinth generator – Leto&#39;s Lab</title>
@@ -8,11 +9,14 @@
 
 	
 	
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/seedrandom/2.4.4/seedrandom.min.js"></script>
+	<script defer src="https://cdnjs.cloudflare.com/ajax/libs/seedrandom/2.4.4/seedrandom.min.js"></script>
 
 	
 	
-	<script type="text/javascript" src="https://unpkg.com/material-components-web@0.44.0/dist/material-components-web.min.js"></script>
+	
+	
+	<link rel="stylesheet" type="text/css" href="/style.7610d2202d1739758b6eda0caf6328429cc2793544f94ff921161686cfc4cce9.css" integrity="sha256-dhDSIC0XOXWLbtoMr2MoQpzCeTVE&#43;U/5IRYWhs/EzOk="/>
+	<script defer type="text/javascript" src="https://unpkg.com/material-components-web@0.44.0/dist/material-components-web.min.js"></script>
 
 	
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
@@ -22,12 +26,20 @@
 	<script defer src="/initiate.js"></script>
 
 	
-  
-  <link rel="stylesheet" type="text/css" href="/style.b303dc8437d54e660f11fe1b0b7246d2c9dd8025fa68e8611dfb941b9c0902f7.css" integrity="sha256-swPchDfVTmYPEf4bC3JG0sndgCX6aOhhHfuUG5wJAvc="/>
+	<link rel="stylesheet" type="text/css" href="/drawer.css"/>
 
 	
-	<link rel="stylesheet" type="text/css" href="/drawer.css"/>
-	<script type="text/javascript" src="/scripts/labyrinth-generator.js"></script>
+		
+		
+		<script defer type="text/javascript" src="/scripts/export-image.js"></script>
+	
+
+	
+	
+	
+		
+		<script defer type="text/javascript" src="/scripts/labyrinth-generator.min.7bf6a9754d18b62e6ac53cb2817f618c38c0dbeba3fd27f01e5deea2d21fcadf.js" integrity="sha256-e/apdU0Yti5qxTyygX9hjDjA2&#43;uj/SfwHl3uotIfyt8="></script>
+	
 
 </head>
 
@@ -50,7 +62,7 @@
 <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2">
 	<div class="mdc-form-field">
 		<div class="mdc-checkbox">
-			<input type="checkbox" class="mdc-checkbox__native-control" id="animation-input"/>
+			<input type="checkbox" class="mdc-checkbox__native-control" id="animated-input"/>
 			<div class="mdc-checkbox__background">
 				<svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
 					<path class="mdc-checkbox__checkmark-path" fill="none" d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
@@ -58,7 +70,7 @@
 				<div class="mdc-checkbox__mixedmark"></div>
 			</div>
 		</div>
-		<label for="animation-input">Animate?</label>
+		<label for="animated-input">Animated</label>
 	</div>
 </div>
 
@@ -158,3 +170,4 @@
 		</main>
 	</div>
 
+</html>
