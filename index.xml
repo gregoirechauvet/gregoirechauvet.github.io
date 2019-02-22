@@ -30,12 +30,21 @@
     </item>
     
     <item>
+      <title>Bijective image transformations</title>
+      <link>/canvas/image-transformations/</link>
+      <pubDate>Fri, 25 May 2012 00:00:00 +0100</pubDate>
+      
+      <guid>/canvas/image-transformations/</guid>
+      <description>play_arrowpausefast_rewindfast_forwardPhotomatonBakerHilbertTransformationplay_arrowFPS</description>
+    </item>
+    
+    <item>
       <title>Game of life</title>
       <link>/canvas/game-of-life/</link>
       <pubDate>Wed, 26 Oct 2011 00:00:00 +0100</pubDate>
       
       <guid>/canvas/game-of-life/</guid>
-      <description> play_arrow   pause   Initialize    Fill percentage       Cell size (px)       Width       Height          Draw grid   </description>
+      <description> play_arrow   pause   Initialize   play_arrow  FPS       Fill percentage       Cell size (px)       Width       Height          Draw grid   </description>
     </item>
     
   </channel>
