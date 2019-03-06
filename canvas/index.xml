@@ -21,11 +21,11 @@
     </item>
     
     <item>
-      <title>Labyrinth generator</title>
-      <link>/canvas/labyrinth-generator/</link>
+      <title>Maze generator</title>
+      <link>/canvas/maze-generator/</link>
       <pubDate>Sat, 17 Nov 2012 00:00:00 +0100</pubDate>
       
-      <guid>/canvas/labyrinth-generator/</guid>
+      <guid>/canvas/maze-generator/</guid>
       <description>     Animated   Generate   Solve    Cell size (px)       Width       Height          Auto seed?    Seed      Download image   </description>
     </item>
     

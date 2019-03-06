@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<title>Maze generator – Leto&#39;s Lab</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<link rel="icon" type="image/png" href="/favicon.png"/>
+
+	
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/seedrandom/2.4.4/seedrandom.min.js"></script>
+
+	
+	
+	
+	
+	
+	<link rel="stylesheet" type="text/css" href="/style.418dcfad4957351af9f30f7ef4b2e4d1c15bf5955add80cd7ce694992c34f595.css" integrity="sha256-QY3PrUlXNRr58w9&#43;9LLk0cFb9ZVa3YDNfOaUmSw09ZU="/>
+	<script type="text/javascript" src="https://unpkg.com/material-components-web@0.44.0/dist/material-components-web.min.js"></script>
+
+	
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+
+	
+	<script src="/initiate.js"></script>
+
+	
+		
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-36757770-4', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+	
+
+	
+	
+	
+	<link rel="stylesheet" type="text/css" href="/drawer.56f834f50836b6d90abb4b6e56cc9775c7a38d6a7f19a50262dd3d20f1260109.css" integrity="sha256-Vvg09Qg2ttkKu0tuVsyXdcejjWp/GaUCYt09IPEmAQk="/>
+
+	
+		
+		
+		<script type="text/javascript" src="/scripts/common/export-image.js"></script>
+	
+
+	
+	
+	
+		
+		<script type="text/javascript" src="/scripts/maze-generator.min.3f3749d808fc1db9a94cdab8b4c85ec6820b04d04061ecca73f9bffee066f825.js" integrity="sha256-PzdJ2Aj8HbmpTNq4tMhexoILBNBAYezKc/m//uBm&#43;CU="></script>
+	
+
+</head>
+
+
+	<header class="mdc-top-app-bar app-bar">
+	<div class="mdc-top-app-bar__row">
+		<section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+			<a href="#" class="demo-menu material-icons mdc-top-app-bar__navigation-icon">menu</a>
+			<a class="mdc-top-app-bar__title" href="/" style="color: inherit;">Maze generator</a>
+		</section>
+	</div>
+</header>
+
+
+	<aside class="mdc-drawer mdc-drawer--dismissible mdc-top-app-bar--fixed-adjust">
+		<div class="mdc-drawer__content">
+			<div class="mdc-layout-grid">
+				<div class="mdc-layout-grid__inner" style="grid-template-columns: repeat(2, minmax(0, 1fr))">
+					
+<div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2">
+	<div class="mdc-form-field">
+		<div class="mdc-checkbox">
+			<input type="checkbox" class="mdc-checkbox__native-control" id="animated-input"/>
+			<div class="mdc-checkbox__background">
+				<svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+					<path class="mdc-checkbox__checkmark-path" fill="none" d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+				</svg>
+				<div class="mdc-checkbox__mixedmark"></div>
+			</div>
+		</div>
+		<label for="animated-input">Animated</label>
+	</div>
+</div>
+
+<div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2">
+	<button id="generate-button" class="mdc-button mdc-button--raised lab-button--fullwidth">
+		<span class="mdc-button__label">Generate</span>
+	</button>
+</div>
+
+<div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2">
+	<button id="solve-button" class="mdc-button mdc-button--raised lab-button--fullwidth" disabled>
+		<span class="mdc-button__label">Solve</span>
+	</button>
+</div>
+
+<div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2">
+	<div class="mdc-text-field mdc-text-field--outlined">
+		<input type="text" id="size-input" class="mdc-text-field__input" value="10" pattern="[0-9]+">
+		<div class="mdc-notched-outline">
+			<div class="mdc-notched-outline__leading"></div>
+			<div class="mdc-notched-outline__notch">
+				<label for="size-input" class="mdc-floating-label">Cell size (px)</label>
+			</div>
+			<div class="mdc-notched-outline__trailing"></div>
+		</div>
+	</div>
+</div>
+
+<div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1">
+	<div class="mdc-text-field mdc-text-field--outlined">
+		<input type="text" id="width-input" class="mdc-text-field__input" value="50" pattern="[0-9]+">
+		<div class="mdc-notched-outline">
+			<div class="mdc-notched-outline__leading"></div>
+			<div class="mdc-notched-outline__notch">
+				<label for="width-input" class="mdc-floating-label">Width</label>
+			</div>
+			<div class="mdc-notched-outline__trailing"></div>
+		</div>
+	</div>
+</div>
+
+<div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1">
+	<div class="mdc-text-field mdc-text-field--outlined">
+		<input type="text" id="height-input" class="mdc-text-field__input" value="40" pattern="[0-9]+">
+		<div class="mdc-notched-outline">
+			<div class="mdc-notched-outline__leading"></div>
+			<div class="mdc-notched-outline__notch">
+				<label for="height-input" class="mdc-floating-label">Height</label>
+			</div>
+			<div class="mdc-notched-outline__trailing"></div>
+		</div>
+	</div>
+</div>
+
+<div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2">
+	<div class="mdc-form-field">
+		<div class="mdc-checkbox">
+			<input type="checkbox" class="mdc-checkbox__native-control" id="auto-seed-input" checked/>
+			<div class="mdc-checkbox__background">
+				<svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+					<path class="mdc-checkbox__checkmark-path" fill="none" d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+				</svg>
+				<div class="mdc-checkbox__mixedmark"></div>
+			</div>
+		</div>
+		<label for="auto-seed-input">Auto seed?</label>
+	</div>
+</div>
+
+<div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2">
+	<div class="mdc-text-field mdc-text-field--outlined mdc-text-field--disabled">
+		<input type="text" id="seed-input" class="mdc-text-field__input" value="hello" disabled>
+		<div class="mdc-notched-outline">
+			<div class="mdc-notched-outline__leading"></div>
+			<div class="mdc-notched-outline__notch">
+				<label for="seed-input" class="mdc-floating-label">Seed</label>
+			</div>
+			<div class="mdc-notched-outline__trailing"></div>
+		</div>
+	</div>
+</div>
+
+<div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2">
+	<button id="download-button" class="mdc-button mdc-button--raised lab-button--fullwidth">
+		<span class="mdc-button__label">Download image</span>
+	</button>
+</div>
+
+				</div>
+			</div>
+		</div>
+	</aside>
+
+	<div class="mdc-drawer-app-content mdc-top-app-bar--fixed-adjust">
+		<main class="main-content" id="main-content">
+			<div class="center-container">
+				<canvas id="draw"></canvas>
+			</div>
+		</main>
+	</div>
+
+</html>
