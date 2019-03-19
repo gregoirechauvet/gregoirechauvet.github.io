@@ -30,6 +30,15 @@
     </item>
     
     <item>
+      <title>Langton ant</title>
+      <link>/canvas/langton-ant/</link>
+      <pubDate>Wed, 06 Jun 2012 00:00:00 +0100</pubDate>
+      
+      <guid>/canvas/langton-ant/</guid>
+      <description> play_arrow   pause   Initialize    Cell size (px)       Height       Width      play_arrow  FPS      play_arrow  Iterations per frame      </description>
+    </item>
+    
+    <item>
       <title>Bijective image transformations</title>
       <link>/canvas/image-transformations/</link>
       <pubDate>Fri, 25 May 2012 00:00:00 +0100</pubDate>
