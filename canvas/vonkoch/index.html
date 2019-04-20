@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8"/>
-	<title>Game of life – Leto&#39;s Lab</title>
+	<title>Von Koch snowflake – Leto&#39;s Lab</title>
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	<link rel="icon" type="image/png" href="/favicon.png"/>
@@ -54,7 +54,7 @@ if (!doNotTrack) {
 	
 	
 		
-		<script type="text/javascript" src="/scripts/game-of-life.min.52c4eaf81cf2b9b5f45a541067cf971b4bd229b90a399231e079e8ca5f0c283c.js" integrity="sha256-UsTq&#43;BzyubX0WlQQZ8&#43;XG0vSKbkKOZIx4Hnoyl8MKDw="></script>
+		<script type="text/javascript" src="/scripts/vonkoch.min.e43b9a4916e41e80b6943c50910a2fe44cba23df191024bd024a47e2d86a141c.js" integrity="sha256-5DuaSRbkHoC2lDxQkQov5Ey6I98ZECS9AkpH4thqFBw="></script>
 	
 
 </head>
@@ -64,7 +64,7 @@ if (!doNotTrack) {
 	<div class="mdc-top-app-bar__row">
 		<section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
 			<a href="#" class="demo-menu material-icons mdc-top-app-bar__navigation-icon">menu</a>
-			<a class="mdc-top-app-bar__title" href="/" style="color: inherit;">Game of life</a>
+			<a class="mdc-top-app-bar__title" href="/" style="color: inherit;">Von Koch snowflake</a>
 		</section>
 	</div>
 </header>
@@ -75,28 +75,41 @@ if (!doNotTrack) {
 			<div class="mdc-layout-grid">
 				<div class="mdc-layout-grid__inner" style="grid-template-columns: repeat(2, minmax(0, 1fr))">
 					
-<div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1">
-	<button id="play-button" class="mdc-button mdc-button--raised lab-button--fullwidth" disabled>
-		<span class="mdc-button__label"><i class="material-icons">play_arrow</i></span>
-	</button>
-</div>
-
-<div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1">
-	<button id="pause-button" class="mdc-button mdc-button--raised lab-button--fullwidth">
-		<span class="mdc-button__label"><i class="material-icons">pause</i></span>
+<div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2">
+	<button id="draw-button" class="mdc-button mdc-button--raised lab-button--fullwidth">
+		<span class="mdc-button__label">Draw</span>
 	</button>
 </div>
 
 <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2">
-	<button id="init-button" class="mdc-button mdc-button--raised lab-button--fullwidth">
-		<span class="mdc-button__label">Initialize</span>
-	</button>
+	<div class="mdc-text-field mdc-text-field--outlined">
+		<input type="text" id="step-input" class="mdc-text-field__input" value="6" pattern="[0-9]+">
+		<div class="mdc-notched-outline">
+			<div class="mdc-notched-outline__leading"></div>
+			<div class="mdc-notched-outline__notch">
+				<label for="step-input" class="mdc-floating-label">Step</label>
+			</div>
+			<div class="mdc-notched-outline__trailing"></div>
+		</div>
+	</div>
 </div>
 
 <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2">
-	<div class="mdc-text-field mdc-text-field--outlined mdc-text-field--with-trailing-icon">
-		<input type="text" id="fps-input" class="mdc-text-field__input" value="60">
-		<i id="fps-play-button" class="material-icons mdc-text-field__icon" tabindex="0" role="button">play_arrow</i>
+	<div class="mdc-text-field mdc-text-field--outlined">
+		<input type="text" id="size-input" class="mdc-text-field__input" value="400" pattern="[0-9]+">
+		<div class="mdc-notched-outline">
+			<div class="mdc-notched-outline__leading"></div>
+			<div class="mdc-notched-outline__notch">
+				<label for="size-input" class="mdc-floating-label">Size (px)</label>
+			</div>
+			<div class="mdc-notched-outline__trailing"></div>
+		</div>
+	</div>
+</div>
+
+<div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2">
+	<div class="mdc-text-field mdc-text-field--outlined mdc-text-field--disabled">
+		<input type="text" id="fps-input" class="mdc-text-field__input" value="1" pattern="[0-9]+" disabled>
 		<div class="mdc-notched-outline">
 			<div class="mdc-notched-outline__leading"></div>
 			<div class="mdc-notched-outline__notch">
@@ -108,62 +121,9 @@ if (!doNotTrack) {
 </div>
 
 <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2">
-	<div class="mdc-text-field mdc-text-field--outlined">
-		<!-- Use pattern validation, because mdc does not support number fields -->
-		<input type="text" id="threshold-input" class="mdc-text-field__input" value="30" pattern="[0-9]{1,2}|100">
-		<div class="mdc-notched-outline">
-			<div class="mdc-notched-outline__leading"></div>
-			<div class="mdc-notched-outline__notch">
-				<label for="threshold-input" class="mdc-floating-label">Fill percentage</label>
-			</div>
-			<div class="mdc-notched-outline__trailing"></div>
-		</div>
-	</div>
-</div>
-
-<div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2">
-	<div class="mdc-text-field mdc-text-field--outlined">
-		<input type="text" id="size-input" class="mdc-text-field__input" value="20" pattern="[0-9]+">
-		<div class="mdc-notched-outline">
-			<div class="mdc-notched-outline__leading"></div>
-			<div class="mdc-notched-outline__notch">
-				<label for="size-input" class="mdc-floating-label">Cell size (px)</label>
-			</div>
-			<div class="mdc-notched-outline__trailing"></div>
-		</div>
-	</div>
-</div>
-
-<div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1">
-	<div class="mdc-text-field mdc-text-field--outlined">
-		<input type="text" id="width-input" class="mdc-text-field__input" value="30">
-		<div class="mdc-notched-outline">
-			<div class="mdc-notched-outline__leading"></div>
-			<div class="mdc-notched-outline__notch">
-				<label for="width-input" class="mdc-floating-label">Width</label>
-			</div>
-			<div class="mdc-notched-outline__trailing"></div>
-		</div>
-	</div>
-</div>
-
-<div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1">
-	<div class="mdc-text-field mdc-text-field--outlined">
-		<input type="text" id="height-input" class="mdc-text-field__input" value="20">
-		<div class="mdc-notched-outline">
-			<div class="mdc-notched-outline__leading"></div>
-			<div class="mdc-notched-outline__notch">
-				<label for="height-input" class="mdc-floating-label">Height</label>
-			</div>
-			<div class="mdc-notched-outline__trailing"></div>
-		</div>
-	</div>
-</div>
-
-<div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2">
 	<div class="mdc-form-field">
 		<div class="mdc-checkbox">
-			<input type="checkbox" class="mdc-checkbox__native-control" id="grid-input" checked/>
+			<input type="checkbox" class="mdc-checkbox__native-control" id="animated-input"/>
 			<div class="mdc-checkbox__background">
 				<svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
 					<path class="mdc-checkbox__checkmark-path" fill="none" d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
@@ -171,7 +131,7 @@ if (!doNotTrack) {
 				<div class="mdc-checkbox__mixedmark"></div>
 			</div>
 		</div>
-		<label for="grid-input">Draw grid</label>
+		<label for="animated-input">Animated</label>
 	</div>
 </div>
 

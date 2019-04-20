@@ -26,7 +26,7 @@
       <pubDate>Wed, 15 Aug 2018 00:00:00 +0100</pubDate>
       
       <guid>/canvas/recaman-sequence/</guid>
-      <description>AnimatedDrawScaleMax iterationHue speedDraw speedDownload image</description>
+      <description>AnimatedDrawScaleMax iterationHue speedDraw speed</description>
     </item>
     
     <item>
@@ -35,7 +35,7 @@
       <pubDate>Sat, 17 Nov 2012 00:00:00 +0100</pubDate>
       
       <guid>/canvas/maze-generator/</guid>
-      <description>     Animated   Generate   Solve    Cell size (px)       Width       Height          Auto seed?    Seed      Download image   </description>
+      <description>     Animated   Generate   Solve    Cell size (px)       Width       Height          Auto seed?    Seed      </description>
     </item>
     
     <item>
@@ -45,6 +45,15 @@
       
       <guid>/canvas/langton-ant/</guid>
       <description> play_arrow   pause   Initialize    Cell size (px)       Height       Width      play_arrow  FPS      play_arrow  Iterations per frame      </description>
+    </item>
+    
+    <item>
+      <title>Von Koch snowflake</title>
+      <link>/canvas/vonkoch/</link>
+      <pubDate>Fri, 01 Jun 2012 00:00:00 +0100</pubDate>
+      
+      <guid>/canvas/vonkoch/</guid>
+      <description> Draw    Step       Size (px)       FPS          Animated   </description>
     </item>
     
     <item>
