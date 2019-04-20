@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/canvas/wolfram/</loc>
+    <lastmod>2019-04-20T16:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/canvas/recaman-sequence/</loc>
     <lastmod>2018-08-15T00:00:00+01:00</lastmod>
   </url>
@@ -29,7 +34,7 @@
   
   <url>
     <loc>/canvas/</loc>
-    <lastmod>2018-08-15T00:00:00+01:00</lastmod>
+    <lastmod>2019-04-20T16:00:00+01:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -40,7 +45,7 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2018-08-15T00:00:00+01:00</lastmod>
+    <lastmod>2019-04-20T16:00:00+01:00</lastmod>
   </url>
   
   <url>
