@@ -17,7 +17,7 @@
       <pubDate>Sat, 20 Apr 2019 16:00:00 +0100</pubDate>
       
       <guid>/canvas/wolfram/</guid>
-      <description>DrawCell size (px)Height</description>
+      <description>DrawCell size (px)Height</description>
     </item>
     
     <item>
@@ -26,7 +26,7 @@
       <pubDate>Wed, 15 Aug 2018 00:00:00 +0100</pubDate>
       
       <guid>/canvas/recaman-sequence/</guid>
-      <description>AnimatedDrawScaleMax iterationHue speedDraw speed</description>
+      <description>AnimatedDrawScaleMax iterationHue speedDraw speed</description>
     </item>
     
     <item>
@@ -35,7 +35,7 @@
       <pubDate>Sat, 17 Nov 2012 00:00:00 +0100</pubDate>
       
       <guid>/canvas/maze-generator/</guid>
-      <description>     Animated   Generate   Solve    Cell size (px)       Width       Height          Auto seed?    Seed      </description>
+      <description>     Animated  Generate  Solve   Cell size (px)      Width      Height         Auto seed?   Seed      </description>
     </item>
     
     <item>
@@ -44,7 +44,7 @@
       <pubDate>Wed, 06 Jun 2012 00:00:00 +0100</pubDate>
       
       <guid>/canvas/langton-ant/</guid>
-      <description> play_arrow   pause   Initialize    Cell size (px)       Height       Width      play_arrow  FPS      play_arrow  Iterations per frame      </description>
+      <description> play_arrow  pause  Initialize   Cell size (px)      Height      Width     play_arrow  FPS     play_arrow  Iterations per frame      </description>
     </item>
     
     <item>
@@ -53,7 +53,7 @@
       <pubDate>Fri, 01 Jun 2012 00:00:00 +0100</pubDate>
       
       <guid>/canvas/vonkoch/</guid>
-      <description> Draw    Step       Size (px)       FPS          Animated   </description>
+      <description> Draw   Step      Size (px)      FPS         Animated   </description>
     </item>
     
     <item>
@@ -62,7 +62,7 @@
       <pubDate>Fri, 25 May 2012 00:00:00 +0100</pubDate>
       
       <guid>/canvas/image-transformations/</guid>
-      <description>play_arrowpausefast_rewindfast_forwardPhotomatonBakerHilbertTransformationplay_arrowFPS</description>
+      <description>Lena Sjööblom --play_arrowpausefast_rewindfast_forwardPhotomatonBakerHilbertTransformationplay_arrowFPS</description>
     </item>
     
     <item>
@@ -71,7 +71,7 @@
       <pubDate>Wed, 26 Oct 2011 00:00:00 +0100</pubDate>
       
       <guid>/canvas/game-of-life/</guid>
-      <description> play_arrow   pause   Initialize   play_arrow  FPS       Fill percentage       Cell size (px)       Width       Height          Draw grid   </description>
+      <description> play_arrow  pause  Initialize  play_arrow  FPS      Fill percentage      Cell size (px)      Width      Height         Draw grid   </description>
     </item>
     
   </channel>
