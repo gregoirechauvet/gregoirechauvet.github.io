@@ -1,3 +1,5 @@
+'use strict';
+
 window.addEventListener('load', () => {
 	const topAppBarElement = document.querySelector('.mdc-top-app-bar');
 	const topAppBar = mdc.topAppBar.MDCTopAppBar.attachTo(topAppBarElement);
